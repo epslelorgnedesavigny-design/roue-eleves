@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roue de la Fortune - Classe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎡 Roue de la Fortune Scolaire</h1>
+        
+        <div class="controls">
+            <input type="file" id="importFile" accept=".txt,.csv" />
+            <button onclick="spin()" id="spinBtn">Lancer la roue !</button>
+            <button onclick="resetWheel()" class="secondary">Réinitialiser</button>
+        </div>
+
+        <div class="wheel-container">
+            <div id="pointer">▼</div>
+            <canvas id="canvas" width="500" height="500"></canvas>
+        </div>
+
+        <div id="result-modal" class="modal">
+            <div class="modal-content">
+                <h2 id="winner-name">?</h2>
+                <p>Voulez-vous retirer cet élève pour le prochain tour ?</p>
+                <button onclick="removeWinner()">Oui, l'éliminer</button>
+                <button onclick="closeModal()" class="secondary">Non, le laisser</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
